@@ -20,5 +20,11 @@ jobs:
           distribution: "temurin"
           cache: maven
       - run: mvn -B clean install --file pom.xml
+      
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Artifact name
+          path: target/*.jar
           
       
