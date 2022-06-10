@@ -33,7 +33,7 @@ jobs:
       - name: Heroku Build and push
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_API_NAME: pruebaherokuperficient
+          HEROKU_APP_NAME: pruebaherokuperficient
         run: heroku plugins:install java && heroku deploy:jar target/protobootapp-0.0.1-SNAPSHOT.jar --jdk 11 -Dserver.port=$PORT --app $HEROKU_APP_NAME          
           
       
